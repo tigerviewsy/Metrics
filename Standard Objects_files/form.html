@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0071)https://www.salesforce.com/developer/docs/api/Content/feedback/form.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Feedback form</title>
+
+<link href="https://www.salesforce.com/developer/docs/api/Content/help.css" rel="stylesheet">
+
+<!-- Feedback Files -->        
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="container.css">
+
+<!-- Dependencies -->
+<script type="text/javascript" src="yahoo-dom-event.js"></script>
+
+<!-- Source file -->
+<script type="text/javascript" src="container-min.js"></script>
+
+<!-- Custom functions -->
+<script type="text/javascript" src="feedback.js"></script>
+<!-- End Feedback Files -->
+
+<style type="text/css">
+p {margin: 0px;}
+</style>
+
+<style type="text/css"></style></head>
+<body onload="init(); checkCookie()" style="border:0px;">
+
+<!-- BEGIN FEEDBACK TABLE -->
+<div class="yui-panel-container yui-dialog" id="feedback_c" style="z-index: 6; left: 354px; top: 150px;"><div id="feedback" style="width: 552px; visibility: inherit;" class=" yui-module yui-overlay yui-panel">
+<h1 class="helpHead1">Submit Feedback - <span id="header"></span></h1>
+<form name="feedbackform" id="feedbackform" action="https://www.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+<!-- All the hidden fields -->
+<input type="hidden" id="orgid" name="orgid" value="00D000000000062">
+<input type="hidden" id="status" name="status" value="New">
+<input type="hidden" id="priority" name="priority" value="Normal">
+<input type="hidden" id="type" name="type" value="Feedback">
+<input type="hidden" id="reason" name="reason" value="Documentation Feedback">
+
+<!-- Record type = Support -->
+<input id="recordType" name="recordType" value="01230000000003e" type="hidden">
+
+<!-- General Application Area -->
+<input id="00N300000014jmC" name="00N300000014jmC" value="Help &amp; Training" type="hidden">
+
+<script type="text/javascript">
+var name = document.URL.substring(0, document.URL.lastIndexOf("/"))
+var docName;
+if (name.match(/^[a-zA-Z0-9_]$/))
+    {
+     docName = name;
+    }           
+document.write("<input type=\"hidden\" name=\"retURL\" value=\"" + docName + "/thanks.htm\" />");
+document.write("<input id=\"subject\" name=\"subject\" value=\"Doc Feedback on: " + parent.docURL + "\" type=\"hidden\" />");
+document.write("<input id=\"00N30000001mN2A\" name=\"00N30000001mN2A\" value=\"" + parent.docVersion + "\" type=\"hidden\" />");
+document.write("<input id=\"00N30000001mN25\" name=\"00N30000001mN25\" value=\"" + parent.docType + "\" type=\"hidden\">");
+document.write("<input id=\"00N00000000z2xc\" name=\"00N00000000z2xc\" value=\"" + parent.docFunctionalArea + "\" type=\"hidden\">");
+</script><input type="hidden" name="retURL" value="undefined/thanks.htm"><input id="subject" name="subject" value="Doc Feedback on: sforce_api_objects_list.htm" type="hidden"><input id="00N30000001mN2A" name="00N30000001mN2A" value="Winter &#39;12" type="hidden"><input id="00N30000001mN25" name="00N30000001mN25" value="API" type="hidden"><input id="00N00000000z2xc" name="00N00000000z2xc" value="API / Sforce Documentation" type="hidden">
+
+<div id="form" style="padding: 5px;">
+
+<script type="text/javascript">
+document.write("<p>Thank you for taking a moment to tell us how this documentation helped you. " + 
+				"Your feedback helps us to continually improve the salesforce.com documentation. </p>" + 
+                "<h2 class=\"helpHead2\">" + parent.document.title + "</h2>");
+</script><p>Thank you for taking a moment to tell us how this documentation helped you. Your feedback helps us to continually improve the salesforce.com documentation. </p><h2 class="helpHead2">Standard Objects</h2>
+
+<table>
+<tbody><tr>
+	<td>
+		<table>
+		<tbody><tr>
+			<td align="right"><p><label for="00N30000001mN1l">Was this documentation helpful?</label></p></td>
+			<td>
+				<select id="00N30000001mN1l" name="00N30000001mN1l" title="Doc Feedback Type" onchange="openFeedback(value)">
+					<option value="Helpful">Yes</option>
+					<option value="Helpful, but">Yes, Except...</option>
+					<option value="Unhelpful">No</option>
+				</select>
+			</td>
+		</tr>
+		</tbody></table>
+	</td>
+</tr>
+<tr id="improve">
+	<td colspan="2">
+		<h2 class="helpHead2">Areas to Improve <span style="font-size:70%">(Check all that apply)</span></h2>
+		<table style="font-size:90%;">
+		<tbody><tr>
+			<td><input type="checkbox" name="00N30000001mN1v" value="Incorrect info" style="margin:2px"> <span id="cb0"></span></td>
+			<td><input type="checkbox" name="00N30000001mN1v" value="Hard to understand" style="margin:2px"> <span id="cb1"></span></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="00N30000001mN1v" value="Missing info" style="margin:2px"> <span id="cb2"></span></td>
+			<td><input type="checkbox" name="00N30000001mN1v" value="Incorrect code samples or images" style="margin:2px"> <span id="cb3"></span></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="00N30000001mN1v" value="Broken links" style="margin:2px"> <span id="cb4"></span></td>
+			<td><input type="checkbox" name="00N30000001mN1v" value="Typo" style="margin:2px"> <span id="cb5"></span></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="00N30000001mN1v" value="More samples needed" style="margin:2px"> <span id="cb6"></span></td>
+			<td></td>
+		</tr>
+		<tr id="tr7">
+			<td colspan="2"><input type="checkbox" name="00N30000001mN1v" value="Misleading title" style="margin:2px"> <span id="cb7"></span></td>
+		</tr>
+		<tr id="tr8">
+			<td colspan="2"><input type="checkbox" name="00N30000001mN1v" value="Incorrectly found in search results" style="margin:2px"> <span id="cb8"></span></td>
+		</tr>
+		</tbody></table>
+	</td>
+</tr>
+<tr>
+	<td colspan="2"><h2 class="helpHead2">Comments <span style="font-size:70%">(Up to 32,000 characters maximum)</span></h2></td>
+</tr>
+<tr>
+	<td colspan="2"><textarea cols="60" rows="8" name="description" id="description"></textarea></td>
+</tr>
+<tr>
+	<td colspan="2"><h2 class="helpHead2">Contact Information</h2><p>If you'd like, let us know how we can contact you in case we need to follow up for more information on your comments. We may not be able to respond directly to all feedback, but we always value your input.</p></td>
+</tr>
+<tr>
+	<td>
+		<table>
+		<tbody><tr>
+			<td align="right"><p><label for="name">Name:</label></p></td>
+			<td>
+			<script type="text/javascript">
+			document.write("<input id=\"name\" maxlength=\"80\" name=\"name\" size=\"40\" type=\"text\" onchange=\"setCookie(\'formName', this.value, 7)\" style=\"margin:2px\" value=\"" + getCookie('formName') + "\" />");
+			</script><input id="name" maxlength="80" name="name" size="40" type="text" onchange="setCookie(&#39;formName&#39;, this.value, 7)" style="margin:2px" value=" ">
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="right"><p><label for="email">Email:</label></p></td>
+			<td>
+			<script type="text/javascript">
+			document.write("<input id=\"email\" maxlength=\"80\" name=\"email\" size=\"40\" type=\"text\" onchange=\"setCookie(\'formEmail', this.value, 7)\" style=\"margin:2px\" value=\"" + getCookie('formEmail') + "\" />");
+			</script><input id="email" maxlength="80" name="email" size="40" type="text" onchange="setCookie(&#39;formEmail&#39;, this.value, 7)" style="margin:2px" value=" ">
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="right"><p><label for="company">Company:</label></p></td>
+			<td>
+			<script type="text/javascript">
+			document.write("<input id=\"company\" maxlength=\"80\" name=\"company\" size=\"40\" type=\"text\" onchange=\"setCookie(\'formCompany', this.value, 7)\" style=\"margin:2px\" value=\"" + getCookie('formCompany') + "\" />");
+			</script><input id="company" maxlength="80" name="company" size="40" type="text" onchange="setCookie(&#39;formCompany&#39;, this.value, 7)" style="margin:2px" value=" ">
+			</td>
+		</tr>
+		</tbody></table>
+	</td>
+</tr>
+</tbody></table>
+</div>
+</form>
+<div class="ft"><span class="button-group"><button type="button">Send Feedback</button><button type="button">Cancel</button></span></div></div></div>
+
+<div id="feedbackmenu">
+<table cellpadding="8" cellspacing="0" class="featureTable" align="center">
+<tbody><tr>
+	<th class="featureTableHeader">Was this information helpful?</th>
+</tr>
+<tr>
+	<td align="center"><a href="https://www.salesforce.com/developer/docs/api/Content/feedback/form.htm#feedback" onclick="openFeedback(helpful)">Yes</a>:  Tell us what you liked.</td>
+</tr>
+<tr>
+	<td align="center"><a href="https://www.salesforce.com/developer/docs/api/Content/feedback/form.htm#feedback" onclick="openFeedback(helpfulBut)">Yes, except:</a> Report typos, errors, and inaccuracies.</td>
+</tr>
+<tr>
+	<td align="center"><a href="https://www.salesforce.com/developer/docs/api/Content/feedback/form.htm#feedback" onclick="openFeedback(unhelpful)">No</a>: Tell us what we can do better.</td>
+</tr>
+</tbody></table>
+</div>
+<!-- END FEEDBACK TABLE-->
+
+
+
+<iframe id="_yuiResizeMonitor" style="visibility: visible; width: 10em; height: 10em; position: absolute; top: -136px; left: -136px; border-style: none; border-width: 0px; opacity: 0;"></iframe></body></html>
